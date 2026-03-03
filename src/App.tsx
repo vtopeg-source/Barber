@@ -738,15 +738,13 @@ export default function App() {
       <input type="file" ref={fileInputRef} onChange={handleUpload} accept="image/*" className="hidden" />
       <input type="file" ref={otherPersonInputRef} onChange={handleOtherPersonUpload} accept="image/*" className="hidden" />
       
-      {user?.is_admin === 1 && (
-        <button 
-          onClick={() => setScreen('admin')}
-          className="fixed bottom-4 left-4 p-2 bg-white/50 backdrop-blur-sm rounded-full text-stone-300 hover:text-stone-600 transition-all z-50 border border-stone-100 shadow-sm"
-          title="Админ-панель"
-        >
-          <Settings size={16} />
-        </button>
-      )}
+      <button 
+        onClick={() => setScreen('admin')}
+        className="fixed bottom-4 left-4 p-2 bg-white/50 backdrop-blur-sm rounded-full text-stone-300 hover:text-stone-600 transition-all z-50 border border-stone-100 shadow-sm"
+        title="Админ-панель"
+      >
+        <Settings size={16} />
+      </button>
 
       {showShareModal && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={() => setShowShareModal(false)}>
@@ -906,13 +904,13 @@ export default function App() {
               className="group relative w-full h-20 bg-stone-900 border-2 border-stone-800 rounded-2xl px-4 flex items-center justify-between hover:scale-[1.02] transition-all shadow-xl"
             >
               <div className="text-left">
-                <span className="absolute -top-2.5 left-4 bg-indigo-500 text-white text-[9px] font-black px-2 py-0.5 rounded-full uppercase tracking-widest shadow-md">ВЫГОДНЫЙ</span>
+                <span className="absolute -top-3 left-4 bg-indigo-500 text-white text-[11px] font-black px-2.5 py-1 rounded-full uppercase tracking-widest shadow-md">ВЫГОДНЫЙ</span>
                 <p className="text-sm font-black text-white">25 <span className="text-base">⭐</span> <span className="text-xs font-bold text-stone-300 ml-1">(25 примерок)</span></p>
               </div>
               <div className="bg-white text-stone-900 px-3 py-1.5 rounded-xl font-black text-sm group-hover:bg-amber-400 transition-colors">
                 119 ₽
               </div>
-              <span className="absolute -bottom-2.5 right-4 bg-indigo-500 text-white text-[9px] font-black px-3 py-0.5 rounded-full uppercase tracking-widest shadow-md">Беру!</span>
+              <span className="absolute -bottom-3 right-4 bg-indigo-500 text-white text-[11px] font-black px-3.5 py-1 rounded-full uppercase tracking-widest shadow-md">Беру!</span>
             </button>
 
             <button 
