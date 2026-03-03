@@ -563,6 +563,15 @@ export default function App() {
                 <span className="text-xs font-black uppercase tracking-widest">Галерея</span>
               </button>
             </div>
+            <div className="flex justify-center mt-4">
+              <button 
+                onClick={() => setScreen('admin')}
+                className="flex items-center gap-2 text-xs font-medium text-stone-400 hover:text-stone-600 transition-colors py-2 px-4 rounded-full hover:bg-stone-100"
+              >
+                <Settings size={14} />
+                <span>Админ-панель</span>
+              </button>
+            </div>
           </div>
         ) : processedImage ? (
           <div className="space-y-4">
@@ -737,14 +746,6 @@ export default function App() {
 
       <input type="file" ref={fileInputRef} onChange={handleUpload} accept="image/*" className="hidden" />
       <input type="file" ref={otherPersonInputRef} onChange={handleOtherPersonUpload} accept="image/*" className="hidden" />
-      
-      <button 
-        onClick={() => setScreen('admin')}
-        className="fixed bottom-4 left-4 p-2 bg-white/50 backdrop-blur-sm rounded-full text-stone-300 hover:text-stone-600 transition-all z-50 border border-stone-100 shadow-sm"
-        title="Админ-панель"
-      >
-        <Settings size={16} />
-      </button>
 
       {showShareModal && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={() => setShowShareModal(false)}>
