@@ -486,9 +486,9 @@ export default function App() {
       </div>
 
       {/* Main Image Frame */}
-      <div className="flex-1 p-4 flex flex-col items-center justify-center min-h-[400px]">
+      <div className="flex-1 p-4 flex flex-col items-center min-h-[400px]">
         {processedImage ? (
-          <div className="relative w-full aspect-[3/4] bg-white rounded-[40px] overflow-hidden shadow-xl border-4 border-white flex items-center justify-center group">
+          <div className="relative w-full aspect-[3/4] bg-white rounded-[40px] overflow-hidden shadow-xl border-4 border-white flex items-center justify-center group my-auto">
             <img src={processedImage} className="w-full h-full object-cover" alt="Result" />
             
             {user?.has_paid === 0 && (
@@ -504,7 +504,7 @@ export default function App() {
             )}
           </div>
         ) : selectedImage ? (
-          <div className="relative w-full aspect-[3/4] bg-white rounded-[40px] overflow-hidden shadow-xl border-4 border-white flex items-center justify-center group">
+          <div className="relative w-full aspect-[3/4] bg-white rounded-[40px] overflow-hidden shadow-xl border-4 border-white flex items-center justify-center group my-auto">
             <img src={selectedImage} className="w-full h-full object-cover" alt="Selected" />
             {isProcessing && (
               <div className="absolute inset-0 bg-stone-900/60 backdrop-blur-sm flex flex-col items-center justify-center text-white z-10">
@@ -514,7 +514,7 @@ export default function App() {
             )}
           </div>
         ) : beforeAfterPairs.length > 0 ? (
-          <div className="w-full space-y-6 pt-4">
+          <div className="w-full space-y-6 pt-4 my-auto">
             <p className="text-center text-sm font-black text-stone-900 uppercase tracking-[0.25em]">Найди свой идеальный стиль</p>
             <BeforeAfterSlider 
               before={beforeAfterPairs[currentSliderIndex].before_url} 
@@ -531,7 +531,7 @@ export default function App() {
             </div>
           </div>
         ) : (
-          <div className="relative w-full aspect-[3/4] bg-white rounded-[40px] overflow-hidden shadow-xl border-4 border-white flex items-center justify-center group">
+          <div className="relative w-full aspect-[3/4] bg-white rounded-[40px] overflow-hidden shadow-xl border-4 border-white flex items-center justify-center group my-auto">
             <div className="flex flex-col items-center text-stone-300">
               <User size={80} strokeWidth={1} />
               <p className="mt-4 font-bold uppercase tracking-widest text-xs">Загрузи фото</p>
@@ -541,7 +541,7 @@ export default function App() {
       </div>
 
       {/* Controls Area */}
-      <div className="bg-white rounded-t-[40px] shadow-2xl p-6 pb-10 border-t border-stone-100">
+      <div className="bg-white rounded-[40px] shadow-2xl p-6 pb-10 border border-stone-100 mb-4 mx-4 sm:mx-6">
         {!selectedImage && !processedImage ? (
           <div className="space-y-6">
             <p className="text-center text-sm font-bold text-stone-600 leading-relaxed px-2">
