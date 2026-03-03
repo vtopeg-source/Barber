@@ -1,0 +1,5 @@
+{
+  "name": "Бородач ⭐",
+  "description": "Виртуальная примерка усов, бороды и бакенбардов с оплатой Telegram Stars",
+  "requestFramePermissions": ["camera"]
+}
